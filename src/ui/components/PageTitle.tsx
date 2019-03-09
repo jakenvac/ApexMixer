@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const TitleContainer = styled.div`
-  padding: ${p => p.theme.sizes.lg.padding} ${p => p.theme.sizes.sm.padding};
+  padding: ${p => p.theme.sizes.sm.padding};
   text-align: center;
   color: ${p => p.theme.colors.white};
 `;
@@ -24,7 +24,7 @@ const TitleText = styled.h1`
 const PageTitle = () => {
   return (
     <TitleContainer>
-      <Logo src={require("../assets/logo.png")} />
+      <Logo src={require("../assets/logo_alt.png")} />
       <TitleText>APEX MIXER</TitleText>
     </TitleContainer>
   );

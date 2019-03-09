@@ -10,7 +10,7 @@ const theme = {
     white: "#fff",
     black: "#000",
     apexRed: "#be323b",
-    apexBeige: "#f3f3f3",
+    apexBeige: "#e5e1d8",
     apexPurple: "#8e56de"
   },
   sizes: {

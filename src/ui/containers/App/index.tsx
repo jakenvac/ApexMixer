@@ -1,10 +1,31 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faHeart } from '@fortawesome/free-solid-svg-icons'
-library.add(faGithub, faHeart);
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {
+  faHeart,
+  faBomb,
+  faRadiation,
+  faHeartbeat,
+  faEye,
+  faShieldAlt,
+  faRunning,
+  faRobot,
+  faGhost
+} from "@fortawesome/free-solid-svg-icons";
+library.add(
+  faGithub,
+  faHeart,
+  faBomb,
+  faRadiation,
+  faHeartbeat,
+  faEye,
+  faShieldAlt,
+  faRunning,
+  faRobot,
+  faGhost
+);
 
 import theme from "../../theme";
 import PageTitle from "../../components/PageTitle";
