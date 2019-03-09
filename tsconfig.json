@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    // "jsxFactory": "React.createElement",
+  },
+  "include": ["src/**/*"],
+  "exclude": ["**/*.test.ts", "**/__mocks__", "**/*.fake.ts"]
+}

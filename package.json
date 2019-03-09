@@ -1,0 +1,36 @@
+{
+  "name": "apexmixer",
+  "version": "1.0.0",
+  "description": "Apex legends rules randomizer",
+  "main": "index.html",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean",
+    "build": "parcel build src/ui/index.html --out-dir dist/prod",
+    "start": "parcel serve src/ui/index.html --out-dir dist/dev",
+    "test": "jest",
+    "test-watch": "jest --watchAll"
+  },
+  "author": "Jake Langford (JakenVac)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.9",
+    "@types/node": "^11.10.5",
+    "jest": "^24.1.0",
+    "parcel-bundler": "^1.11.0",
+    "postcss-modules": "^1.4.1",
+    "rimraf": "^2.6.3",
+    "sass": "^1.17.2",
+    "ts-jest": "^24.0.0",
+    "typescript": "^3.3.3333"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "styled-components": "^4.1.3"
+  }
+}
