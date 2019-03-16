@@ -15,17 +15,26 @@ class ApexMixer {
   }
 
   getRandomCharacter(): string {
-    const r = this.getRandomNumber(this.characters.length);
+    const r = this.randomizer.getRandomNumber(this.characters.length);
     return this.characters[r];
   }
 
+  getBatchOfUniqueRandomCharacters(amountToGenerate: number): string[] {
+    if (amountToGenerate > this.characters.length)
+      throw new Error("Not enough characters to satisfy requirement");
+
+    const characterSamples = this.getShuffledCharacters();
+    return characterSamples.slice(0, amountToGenerate);
+  }
+
   getRandomLocation(): Location {
-    const r = this.getRandomNumber(this.locations.length);
+    const r = this.randomizer.getRandomNumber(this.locations.length);
     return this.locations[r];
   }
 
-  private getRandomNumber(length: number) {
-    return this.randomizer.getRandomNumber(length);
+  private getShuffledCharacters() {
+    const shuffledCharacters = this.randomizer.shuffleArray(this.characters);
+    return shuffledCharacters;
   }
 }
 
