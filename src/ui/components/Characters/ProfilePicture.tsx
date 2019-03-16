@@ -5,18 +5,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface ProfilePictureProps {
   player?: string;
+  key?: any;
 }
 
 const PlayerData = {
-  Bangalore: { filter: "hue-rotate(0deg)", icon: "bomb" },
-  Bloodhound: { filter: "hue-rotate(0deg)", icon: "eye" },
-  Lifeline: { filter: "hue-rotate(-70deg)", icon: "heartbeat" },
-  Caustic: { filter: "hue-rotate(50deg) saturate(.4)", icon: "radiation" },
-  Gibraltar: { filter: "hue-rotate(50deg)", icon: "shield-alt" },
-  Mirage: { filter: "hue-rotate(40deg)", icon: "running" },
-  Pathfinder: { filter: "hue-rotate(-170deg)", icon: "robot" },
-  Wraith: { filter: "hue-rotate(-100deg)", icon: "ghost" },
-  None: { filter: "saturate(0)", icon: "" }
+  bangalore: { filter: "hue-rotate(0deg)", icon: "bomb", name:"Bangalore" },
+  bloodhound: { filter: "hue-rotate(10deg)", icon: "eye", name:"Bloodhound" },
+  lifeline: { filter: "hue-rotate(-70deg)", icon: "heartbeat", name:"Lifeline" },
+  caustic: { filter: "hue-rotate(50deg) saturate(.4)", icon: "radiation", name:"Caustic" },
+  gibraltar: { filter: "hue-rotate(50deg)", icon: "shield-alt", name:"Gibralta" },
+  mirage: { filter: "hue-rotate(40deg)", icon: "running", name:"Mirage" },
+  pathfinder: { filter: "hue-rotate(-170deg)", icon: "robot", name:"Pathfinder" },
+  wraith: { filter: "hue-rotate(-100deg)", icon: "ghost", name: "Wraith" },
+  none: { filter: "saturate(0)", icon: "dice", name: "-" }
 };
 
 const Parallelogram = styled.div`
@@ -76,16 +77,18 @@ const Label = styled.div`
 `;
 
 const ProfilePicture = (props: ProfilePictureProps) => {
-  const { player = "None" } = props;
-  const PlayerFilter = PlayerData[props.player].filter;
+  const { player = "none" } = props;
+  console.log(player);
+  const PlayerInfo = PlayerData[player.toLowerCase()];
+  const PlayerFilter = PlayerInfo.filter;
 
   return (
     <Parallelogram>
       <Unskew filter={PlayerFilter}>
         <Body>
-          <FontAwesomeIcon color="white" icon={PlayerData[props.player].icon} />
+          <FontAwesomeIcon color="white" icon={PlayerInfo.icon} />
         </Body>
-        <Label>{props.player}</Label>
+        <Label>{PlayerInfo.name}</Label>
       </Unskew>
     </Parallelogram>
   );

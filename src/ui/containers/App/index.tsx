@@ -12,7 +12,8 @@ import {
   faShieldAlt,
   faRunning,
   faRobot,
-  faGhost
+  faGhost,
+  faDice,
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faGithub,
@@ -24,7 +25,8 @@ library.add(
   faShieldAlt,
   faRunning,
   faRobot,
-  faGhost
+  faGhost,
+  faDice
 );
 
 import theme from "../../theme";
