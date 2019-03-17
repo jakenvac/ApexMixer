@@ -9,6 +9,8 @@
     "build": "parcel build src/ui/index.html --out-dir dist/prod",
     "start": "parcel serve src/ui/index.html --out-dir dist/dev",
     "test": "jest",
+    "prepublish": "rimraf docs/",
+    "publish": "parcel build src/ui/index.html --out-dir docs",
     "test-watch": "jest --watchAll"
   },
   "author": "Jake Langford (JakenVac)",

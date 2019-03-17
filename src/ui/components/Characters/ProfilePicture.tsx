@@ -76,7 +76,6 @@ const Label = styled.div`
 
 const ProfilePicture = (props: ProfilePictureProps) => {
   const { player = "none" } = props;
-  console.log(player);
   const PlayerInfo = PlayerData[player.toLowerCase()];
   const PlayerFilter = PlayerInfo.filter;
 
