@@ -4,6 +4,7 @@ const theme = {
     standard: `ubuntu,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif`,
     sizes: {
       lg: '72px;',
+      md: '27px',
     }
   },
   colors: {

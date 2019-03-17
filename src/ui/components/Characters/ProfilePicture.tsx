@@ -23,7 +23,6 @@ const PlayerData = {
 const Parallelogram = styled.div`
   width: 150px;
   height: 100px;
-  background: pink;
   transform: skew(-20deg);
   position: relative;
   overflow: hidden;
@@ -35,7 +34,6 @@ const Unskew = styled.div`
   transform: skew(20deg);
   width: 126%;
   height: 100%;
-  background: green;
   position: relative;
   left: -20px;
   padding: 0px 42px;

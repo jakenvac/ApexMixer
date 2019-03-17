@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
+import ApexMixer from "../../../ApexLib/ApexMixer";
+
 import HoloButton from "../../components/HoloButton";
 import PageSection from "../../components/PageSection";
 
-import PictureCluster from "../../components/Characters/PictureCluster";
-import ApexMixer from "../../../ApexLib/ApexMixer";
+import CharacterSection from './characterSection';
 
 const Container = styled.section``;
 
@@ -27,31 +28,33 @@ class RollContainer extends React.Component {
     super(props);
     this.state = {
       Randomizer: new ApexMixer(),
-      Characters: ["none", "none", "none"],
+      Characters: ["none", "none", "none"]
     };
   }
+
   render = () => {
     return (
       <Container>
-        <RollButtonContainer>
-          <HoloButton
-            onClick={() => {
-              const chars = [];
-              chars.push(this.state.Randomizer.getRandomCharacter());
-              chars.push(this.state.Randomizer.getRandomCharacter());
-              chars.push(this.state.Randomizer.getRandomCharacter());
-              this.setState({Characters: chars}, ()=>console.log(this.state));
-            }}
-          >
-            RANDOMIZE
-          </HoloButton>
-        </RollButtonContainer>
+        <this.RenderRandomizeButton />
         <PageSection>
-          <PictureCluster Classes={this.state.Characters} />
+          <CharacterSection characters={this.state.Characters} />
         </PageSection>
       </Container>
     );
   };
+
+  private RenderRandomizeButton = () => {
+    return (
+      <RollButtonContainer>
+        <HoloButton onClick={this.randomizeGame}>RANDOMIZE</HoloButton>
+      </RollButtonContainer>
+    );
+  }
+
+  private randomizeGame = () => {
+    const chars = this.state.Randomizer.getBatchOfUniqueRandomCharacters(3);
+    this.setState({ Characters: chars }, () => console.log(this.state));
+  }
 }
 
 export default RollContainer;

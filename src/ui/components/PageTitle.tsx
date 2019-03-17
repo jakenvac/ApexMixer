@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Title from "./Title";
 
 const TitleContainer = styled.div`
   padding: ${p => p.theme.sizes.sm.padding};
@@ -12,11 +13,8 @@ const Logo = styled.img`
   max-width: 120px;
 `;
 
-const TitleText = styled.h1`
-  font-family: ${p => p.theme.fonts.title};
-  font-size: ${p => p.theme.fonts.sizes.lg};
+const TitleText = styled(Title)`
   line-height: ${p => p.theme.fonts.sizes.lg};
-  font-weight: 700;
   padding: 0px;
   margin: 0px;
 `;
@@ -25,7 +23,7 @@ const PageTitle = () => {
   return (
     <TitleContainer>
       <Logo src={require("../assets/logo_alt.png")} />
-      <TitleText>APEX MIXER</TitleText>
+      <TitleText type='h1'>APEX MIXER</TitleText>
     </TitleContainer>
   );
 };
