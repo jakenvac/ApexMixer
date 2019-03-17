@@ -13,7 +13,7 @@ const PlayerData = {
   bloodhound: { filter: "hue-rotate(10deg)", icon: "eye", name:"Bloodhound" },
   lifeline: { filter: "hue-rotate(-70deg)", icon: "heartbeat", name:"Lifeline" },
   caustic: { filter: "hue-rotate(50deg) saturate(.4)", icon: "radiation", name:"Caustic" },
-  gibraltar: { filter: "hue-rotate(50deg)", icon: "shield-alt", name:"Gibralta" },
+  gibraltar: { filter: "hue-rotate(50deg)", icon: "shield-alt", name:"Gibraltar" },
   mirage: { filter: "hue-rotate(40deg)", icon: "running", name:"Mirage" },
   pathfinder: { filter: "hue-rotate(-170deg)", icon: "robot", name:"Pathfinder" },
   wraith: { filter: "hue-rotate(-100deg)", icon: "ghost", name: "Wraith" },

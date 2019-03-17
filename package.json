@@ -9,11 +9,12 @@
     "build": "parcel build src/ui/index.html --out-dir dist/prod",
     "start": "parcel serve src/ui/index.html --out-dir dist/dev",
     "test": "jest",
-    "prepublish": "rimraf docs/",
+    "prepublish": "rimraf docs/*.*",
     "publish": "parcel build src/ui/index.html --out-dir docs",
     "test-watch": "jest --watchAll"
   },
   "author": "Jake Langford (JakenVac)",
+  "repository": "github.com/jakehl/apexmixer",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^24.0.9",
