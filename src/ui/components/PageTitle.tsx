@@ -6,6 +6,10 @@ const TitleContainer = styled.div`
   padding: ${p => p.theme.sizes.sm.padding};
   text-align: center;
   color: ${p => p.theme.colors.white};
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-center;
 `;
 
 const Logo = styled.img`
@@ -14,16 +18,18 @@ const Logo = styled.img`
 `;
 
 const TitleText = styled(Title)`
-  line-height: ${p => p.theme.fonts.sizes.lg};
-  padding: 0px;
-  margin: 0px;
+  display: none;
+  @media only screen and (min-width: 768px) {
+    display: block;
+  }
+  margin-left: ${p => p.theme.sizes.md.padding};
 `;
 
 const PageTitle = () => {
   return (
     <TitleContainer>
-      <Logo src={require("../assets/logo_alt.png")} />
-      <TitleText type='h1'>APEX MIXER</TitleText>
+      <Logo alt="Apex Mixer" src={require("../assets/amLogo.svg")} />
+      <TitleText type="h1">APEX MIXER</TitleText>
     </TitleContainer>
   );
 };
