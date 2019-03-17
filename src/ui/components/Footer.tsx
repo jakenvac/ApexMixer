@@ -55,7 +55,7 @@ const Footer = () => {
           Made with <FontAwesomeIcon icon="heart" color="#FAC" /> by{" "}
           <SubtleLink href="https://jlangford.uk">Jake Langford</SubtleLink>
         </p>
-        <SubtleLink href="#">
+        <SubtleLink href="https://github.com/jakehl/apexmixer">
           <FontAwesomeIconMarginRight icon={["fab", "github"]} />
           Contribute on Github
         </SubtleLink>
