@@ -9,25 +9,45 @@ interface ProfilePictureProps {
 }
 
 const PlayerData = {
-  bangalore: { filter: "hue-rotate(0deg)", icon: "bomb", name:"Bangalore" },
-  bloodhound: { filter: "hue-rotate(10deg)", icon: "eye", name:"Bloodhound" },
-  lifeline: { filter: "hue-rotate(-70deg)", icon: "heartbeat", name:"Lifeline" },
-  caustic: { filter: "hue-rotate(50deg) saturate(.4)", icon: "radiation", name:"Caustic" },
-  gibraltar: { filter: "hue-rotate(50deg)", icon: "shield-alt", name:"Gibraltar" },
-  mirage: { filter: "hue-rotate(40deg)", icon: "running", name:"Mirage" },
-  pathfinder: { filter: "hue-rotate(-170deg)", icon: "robot", name:"Pathfinder" },
+  bangalore: { filter: "hue-rotate(0deg)", icon: "bomb", name: "Bangalore" },
+  bloodhound: { filter: "hue-rotate(10deg)", icon: "eye", name: "Bloodhound" },
+  lifeline: {
+    filter: "hue-rotate(-70deg)",
+    icon: "heartbeat",
+    name: "Lifeline"
+  },
+  caustic: {
+    filter: "hue-rotate(50deg) saturate(.4)",
+    icon: "radiation",
+    name: "Caustic"
+  },
+  gibraltar: {
+    filter: "hue-rotate(50deg)",
+    icon: "shield-alt",
+    name: "Gibraltar"
+  },
+  mirage: { filter: "hue-rotate(40deg)", icon: "running", name: "Mirage" },
+  pathfinder: {
+    filter: "hue-rotate(-170deg)",
+    icon: "robot",
+    name: "Pathfinder"
+  },
   wraith: { filter: "hue-rotate(-100deg)", icon: "ghost", name: "Wraith" },
   none: { filter: "saturate(0)", icon: "dice", name: "-" }
 };
 
 const Parallelogram = styled.div`
-  width: 150px;
   height: 100px;
+  width: 80%;
+  @media only screen and (min-width: 430px) {
+    width: 150px;
+  }
+
+  margin: ${p => p.theme.sizes.sm.padding};
   transform: skew(-20deg);
   position: relative;
   overflow: hidden;
   border: 5px solid ${p => p.theme.colors.black};
-  margin: ${p => p.theme.sizes.sm.padding};
 `;
 
 const Unskew = styled.div`
@@ -59,19 +79,29 @@ const Body = styled.div`
   align-items: center;
   font-size: 50px;
   padding-bottom: 25px;
-  padding-left: 10px;
+  margin-left: -20px;
+
+  @media only screen and (min-width: 430px) {
+    margin-left: 0;
+    padding-left: 10px;
+  }
 `;
 
 const Label = styled.div`
   text-align: center;
   background: ${p => p.theme.colors.black};
-  color: ${p => p.theme.colors.white};
-  position: absolute;
-  bottom: -4px;
-  left: -20px;
-  right: 0px;
+  color: ${p => p.theme.colors.white}; 
   font-family: ${p => p.theme.fonts.title};
   text-transform: uppercase;
+
+  position: absolute;
+  bottom: -4px;
+  right: 0px;
+  left: -40px;
+
+  @media only screen and (min-width: 430px) {
+    left: -20px;
+  }
 `;
 
 const ProfilePicture = (props: ProfilePictureProps) => {

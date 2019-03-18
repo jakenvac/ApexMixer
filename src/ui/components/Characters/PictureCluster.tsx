@@ -9,7 +9,11 @@ interface PictureClusterProps {
 
 const PictureContainer = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @media only screen and (min-width: 430px) {
+    flex-direction: row;
+  }
+  align-items: center;
   justify-content: center;
 `;
 
