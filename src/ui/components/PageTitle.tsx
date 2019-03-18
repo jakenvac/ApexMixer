@@ -15,6 +15,7 @@ const TitleContainer = styled.div`
 const Logo = styled.img`
   padding: ${p => p.theme.sizes.sm.padding};
   max-width: 120px;
+  max-height: 120px;
 `;
 
 const TitleText = styled(Title)`
