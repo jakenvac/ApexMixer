@@ -43,9 +43,9 @@ const Unskew = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: 100% 100%;
+    width: 200%;
+    height: 110%;
+    background-size: 110% 100%;
     background-image: url(${require("../../assets/IconBg.jpg")});
     filter: ${p => p.filter};
   }
