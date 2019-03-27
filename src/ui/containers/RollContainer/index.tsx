@@ -38,7 +38,7 @@ class RollContainer extends React.Component {
 
   render = () => {
     return (
-      <Container>
+      <Container id="rollContainer">
         <this.RenderRandomizeButton />
         <PageSection>
           <CharacterSection characters={this.state.Characters} />
@@ -53,7 +53,7 @@ class RollContainer extends React.Component {
   private RenderRandomizeButton = () => {
     return (
       <RollButtonContainer>
-        <HoloButton onClick={this.randomizeGame}>RANDOMIZE</HoloButton>
+        <HoloButton onClick={this.randomizeGame}>RANDOMIZE!</HoloButton>
       </RollButtonContainer>
     );
   }
@@ -61,7 +61,10 @@ class RollContainer extends React.Component {
   private randomizeGame = () => {
     const chars = this.state.Randomizer.getBatchOfUniqueRandomCharacters(3);
     const location = this.state.Randomizer.getRandomLocation();
-    this.setState({ Characters: chars, Locations: [location] });
+    this.setState({ Characters: chars, Locations: [location] }, () => {
+      const champSection = document.getElementById('rollContainer');
+      champSection.scrollIntoView();
+    });
   }
 }
 

@@ -9,7 +9,7 @@ const SectionContainer = styled.section`
 
 const TextContainer = styled.div`
   width: 100%;
-  padding: ${p=>p.theme.sizes.md.padding} ${p=>p.theme.sizes.sm.padding} ;
+  padding: ${p=>p.theme.sizes.sm.padding} ;
   @media only screen and (min-width: 768px) {
     width: 80%;
     margin-left: auto;
