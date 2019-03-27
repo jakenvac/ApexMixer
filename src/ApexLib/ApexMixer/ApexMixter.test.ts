@@ -36,8 +36,7 @@ describe("Apex mixer provides values for each category", () => {
     const mixer = new ApexMixer(new RandomizerFake());
     Locations.forEach(l => {
       const location = mixer.getRandomLocation();
-      expect(location.name).toBe(l.name);
-      expect(location.coords).toEqual(l.coords);
+      expect(location).toBe(l);
     });
   });
 });
