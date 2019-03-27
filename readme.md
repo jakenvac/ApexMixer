@@ -25,16 +25,16 @@ Apex mixer is written in Typescript & React. For styling, styled-components are 
 
 ### Testing
 
-Running `npm t` will do a single pass of Jest Tests
+`npm t` will do a single pass of Jest Tests
 
 ### Running
 
-Running `npm start` will run a local development server on port 1234
+`npm start` will run a development server at `localhost:1234`
 
 ### Building
 
-Running `npm run build` Will produced a minified build at `dist/prod/`
+`npm run build` will produced a minified build at `dist/prod/`
 
 ### Publishing
 
-Running `npm run publish` (**Not** `npm publish`) will produce a minified build in `/docs` where github pages serves it from. Typically this will only be done by a project maintainer so try to keep publishes out of pull requests.
+`npm run publish` (**Not** `npm publish`) will produce a minified build in `/docs` where github pages serves it from. Typically this will only be done by a project maintainer so try to keep publishes out of pull requests.
