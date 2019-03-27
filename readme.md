@@ -1,4 +1,4 @@
-# !['Apex Mixer'](./readme.assets/logo.png)
+!['Apex Mixer'](./readme.assets/logo.png)
 
 A simple Apex Legends randomizer to spice up your life! 🌶 [Roll Here!](https://apexmixer.fun)
 
