@@ -14,6 +14,7 @@ import {
   faRobot,
   faGhost,
   faDice,
+  faSyringe
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faGithub,
@@ -26,7 +27,8 @@ library.add(
   faRunning,
   faRobot,
   faGhost,
-  faDice
+  faDice,
+  faSyringe
 );
 
 import theme from "../../theme";

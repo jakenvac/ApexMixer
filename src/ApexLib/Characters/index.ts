@@ -6,5 +6,6 @@ export default [
   "Gibraltar",
   "Mirage",
   "Pathfinder",
-  "Wraith"
+  "Wraith",
+  "Octane"
 ]

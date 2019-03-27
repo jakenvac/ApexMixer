@@ -32,8 +32,21 @@ const PlayerData = {
     icon: "robot",
     name: "Pathfinder"
   },
-  wraith: { filter: "hue-rotate(-100deg)", icon: "ghost", name: "Wraith" },
-  none: { filter: "saturate(0)", icon: "dice", name: "-" }
+  wraith: {
+    filter: "hue-rotate(-100deg)",
+    icon: "ghost",
+    name: "Wraith"
+  },
+  octane: {
+    filter: "hue-rotate(-280deg)",
+    icon: "syringe",
+    name: "Octane"
+  },
+  none: {
+    filter: "saturate(0)",
+    icon: "dice",
+    name: "-"
+  }
 };
 
 const Parallelogram = styled.div`
@@ -90,7 +103,7 @@ const Body = styled.div`
 const Label = styled.div`
   text-align: center;
   background: ${p => p.theme.colors.black};
-  color: ${p => p.theme.colors.white}; 
+  color: ${p => p.theme.colors.white};
   font-family: ${p => p.theme.fonts.title};
   text-transform: uppercase;
 
